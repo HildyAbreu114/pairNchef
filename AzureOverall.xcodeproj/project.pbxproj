@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		64E025E1242E655A0062AE15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E025E0242E655A0062AE15 /* AppDelegate.swift */; };
 		64E025E3242E655A0062AE15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E025E2242E655A0062AE15 /* SceneDelegate.swift */; };
-		64E025E5242E655A0062AE15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E025E4242E655A0062AE15 /* ViewController.swift */; };
 		64E025EA242E655B0062AE15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64E025E9242E655B0062AE15 /* Assets.xcassets */; };
 		64E025ED242E655B0062AE15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E025EB242E655B0062AE15 /* LaunchScreen.storyboard */; };
 		64E025F8242E655B0062AE15 /* AzureOverallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E025F7242E655B0062AE15 /* AzureOverallTests.swift */; };
+		64E02603242ED8DE0062AE15 /* BrowseRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E02602242ED8DE0062AE15 /* BrowseRecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		64E025DD242E655A0062AE15 /* AzureOverall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AzureOverall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E025E0242E655A0062AE15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64E025E2242E655A0062AE15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		64E025E4242E655A0062AE15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		64E025E9242E655B0062AE15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64E025EC242E655B0062AE15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64E025EE242E655B0062AE15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64E025F3242E655B0062AE15 /* AzureOverallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AzureOverallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E025F7242E655B0062AE15 /* AzureOverallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzureOverallTests.swift; sourceTree = "<group>"; };
 		64E025F9242E655B0062AE15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64E02602242ED8DE0062AE15 /* BrowseRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			children = (
 				64E025E0242E655A0062AE15 /* AppDelegate.swift */,
 				64E025E2242E655A0062AE15 /* SceneDelegate.swift */,
-				64E025E4242E655A0062AE15 /* ViewController.swift */,
+				64E02602242ED8DE0062AE15 /* BrowseRecipeViewController.swift */,
 				64E025E9242E655B0062AE15 /* Assets.xcassets */,
 				64E025EB242E655B0062AE15 /* LaunchScreen.storyboard */,
 				64E025EE242E655B0062AE15 /* Info.plist */,
@@ -196,7 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64E025E5242E655A0062AE15 /* ViewController.swift in Sources */,
+				64E02603242ED8DE0062AE15 /* BrowseRecipeViewController.swift in Sources */,
 				64E025E1242E655A0062AE15 /* AppDelegate.swift in Sources */,
 				64E025E3242E655A0062AE15 /* SceneDelegate.swift in Sources */,
 			);
