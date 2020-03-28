@@ -15,6 +15,7 @@
 		64E02603242ED8DE0062AE15 /* BrowseRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E02602242ED8DE0062AE15 /* BrowseRecipeViewController.swift */; };
 		64E02605242EDF240062AE15 /* Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E02604242EDF240062AE15 /* Anchors.swift */; };
 		64E02609242F1F6A0062AE15 /* BrowseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E02608242F1F6A0062AE15 /* BrowseCollectionViewCell.swift */; };
+		64E0260B242FE1950062AE15 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E0260A242FE1950062AE15 /* RecipeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		64E02602242ED8DE0062AE15 /* BrowseRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseRecipeViewController.swift; sourceTree = "<group>"; };
 		64E02604242EDF240062AE15 /* Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchors.swift; sourceTree = "<group>"; };
 		64E02608242F1F6A0062AE15 /* BrowseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionViewCell.swift; sourceTree = "<group>"; };
+		64E0260A242FE1950062AE15 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
