@@ -85,8 +85,10 @@
 			children = (
 				64E025E0242E655A0062AE15 /* AppDelegate.swift */,
 				64E025E2242E655A0062AE15 /* SceneDelegate.swift */,
+				64E0260C242FE1AB0062AE15 /* View Controllers */,
 				64E02602242ED8DE0062AE15 /* BrowseRecipeViewController.swift */,
-				64E02608242F1F6A0062AE15 /* BrowseCollectionViewCell.swift */,
+				64E0260A242FE1950062AE15 /* RecipeDetailViewController.swift */,
+				64E0260D242FE1D10062AE15 /* Cells */,
 				64E02604242EDF240062AE15 /* Anchors.swift */,
 				64E025E9242E655B0062AE15 /* Assets.xcassets */,
 				64E025EB242E655B0062AE15 /* LaunchScreen.storyboard */,
@@ -102,6 +104,21 @@
 				64E025F9242E655B0062AE15 /* Info.plist */,
 			);
 			path = AzureOverallTests;
+			sourceTree = "<group>";
+		};
+		64E0260C242FE1AB0062AE15 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		64E0260D242FE1D10062AE15 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				64E02608242F1F6A0062AE15 /* BrowseCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +225,7 @@
 				64E02603242ED8DE0062AE15 /* BrowseRecipeViewController.swift in Sources */,
 				64E025E1242E655A0062AE15 /* AppDelegate.swift in Sources */,
 				64E02609242F1F6A0062AE15 /* BrowseCollectionViewCell.swift in Sources */,
+				64E0260B242FE1950062AE15 /* RecipeDetailViewController.swift in Sources */,
 				64E025E3242E655A0062AE15 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
