@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  ShoppingCartTableViewController.swift
 //  AzureOverall
 //
 //  Created by hildy abreu on 3/29/20.
@@ -8,11 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
-    
-    //MARK: UI OBJECTS
-    
-    
+class ShoppingCartTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
