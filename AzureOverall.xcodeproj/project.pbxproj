@@ -16,6 +16,7 @@
 		64E02605242EDF240062AE15 /* Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E02604242EDF240062AE15 /* Anchors.swift */; };
 		64E02609242F1F6A0062AE15 /* BrowseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E02608242F1F6A0062AE15 /* BrowseCollectionViewCell.swift */; };
 		64E0260B242FE1950062AE15 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E0260A242FE1950062AE15 /* RecipeDetailViewController.swift */; };
+		64E0260F243072140062AE15 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E0260E243072140062AE15 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		64E02604242EDF240062AE15 /* Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchors.swift; sourceTree = "<group>"; };
 		64E02608242F1F6A0062AE15 /* BrowseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionViewCell.swift; sourceTree = "<group>"; };
 		64E0260A242FE1950062AE15 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		64E0260E243072140062AE15 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				64E0260C242FE1AB0062AE15 /* View Controllers */,
 				64E02602242ED8DE0062AE15 /* BrowseRecipeViewController.swift */,
 				64E0260A242FE1950062AE15 /* RecipeDetailViewController.swift */,
+				64E0260E243072140062AE15 /* TableViewController.swift */,
 				64E0260D242FE1D10062AE15 /* Cells */,
 				64E02604242EDF240062AE15 /* Anchors.swift */,
 				64E025E9242E655B0062AE15 /* Assets.xcassets */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64E02605242EDF240062AE15 /* Anchors.swift in Sources */,
+				64E0260F243072140062AE15 /* TableViewController.swift in Sources */,
 				64E02603242ED8DE0062AE15 /* BrowseRecipeViewController.swift in Sources */,
 				64E025E1242E655A0062AE15 /* AppDelegate.swift in Sources */,
 				64E02609242F1F6A0062AE15 /* BrowseCollectionViewCell.swift in Sources */,
