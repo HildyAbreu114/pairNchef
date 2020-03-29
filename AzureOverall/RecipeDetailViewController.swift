@@ -15,19 +15,21 @@ class RecipeDetailViewController: UIViewController {
     
     lazy var recipeLabel: UILabel = {
         let nameLabel = UILabel()
-        nameLabel.font = UIFont (name: "savoye-bold", size: 24)
-        nameLabel.text = "name"
+        nameLabel.font = UIFont (name: "optima-bold", size: 30)
+        nameLabel.text = "Name"
         nameLabel.textAlignment = .center
-        nameLabel.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        nameLabel.backgroundColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
-        nameLabel.alpha = 0.4
+        nameLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
+        nameLabel.layer.borderWidth = 2
+        nameLabel.layer.borderColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
+        nameLabel.backgroundColor = #colorLiteral(red: 1, green: 0.8937508464, blue: 0.8871408105, alpha: 1)
+        nameLabel.alpha = 0.6
         return nameLabel
     }()
     
     lazy var contentView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 20
-        view.backgroundColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         view.alpha = 0.3
         return view
     }()
@@ -36,7 +38,7 @@ class RecipeDetailViewController: UIViewController {
        let cellImage = UIImageView()
            cellImage.contentMode = .scaleAspectFill
            cellImage.clipsToBounds = true
-           cellImage.layer.borderWidth = 1
+           cellImage.layer.borderWidth = 2
            cellImage.layer.borderColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
            cellImage.layer.cornerRadius = 20
            cellImage.backgroundColor = .clear
@@ -46,7 +48,11 @@ class RecipeDetailViewController: UIViewController {
     lazy var stepperLabel: UILabel = {
         let stepperValue = UILabel()
         stepperValue.textAlignment = .center
-        stepperValue.backgroundColor = .black
+        stepperValue.text = "0"
+        stepperValue.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
+        stepperValue.alpha = 0.4
+        stepperValue.layer.cornerRadius = 20
+        stepperValue.backgroundColor = #colorLiteral(red: 1, green: 0.8937508464, blue: 0.8871408105, alpha: 1)
         return stepperValue
     }()
     
@@ -54,39 +60,93 @@ class RecipeDetailViewController: UIViewController {
         let addCartButton = UIButton()
         addCartButton.setTitle("Add recipe to cart",for: .normal)
         addCartButton.titleLabel?.font = UIFont (name: "optima-bold", size: 18 )
-        addCartButton.setTitleColor(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
+        addCartButton.setTitleColor(#colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1), for: .normal)
         addCartButton.titleLabel?.textAlignment = .center
         addCartButton.backgroundColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
-        addCartButton.alpha = 0.3
+        addCartButton.alpha = 0.4
         addCartButton.layer.cornerRadius = 20
-        addCartButton.layer.borderWidth = 1
-        addCartButton.layer.borderColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
+        addCartButton.layer.borderWidth = 2
+        addCartButton.layer.borderColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         return addCartButton
     }()
     lazy var goToCartButton: UIButton = {
         let image = UIImage(named:"shoppingCart3")as UIImage?
         let cartButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
         cartButton.setImage(image, for: .normal)
+        
         cartButton.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         cartButton.addTarget(self, action: Selector("buttonTapped"),for:.touchUpInside)
         return cartButton
     }()
     
+    lazy var backgroundImageView: UIImageView = {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.layer.cornerRadius = 20
+        backgroundImage.image = #imageLiteral(resourceName: "2")
+        backgroundImage.contentMode = UIView.ContentMode.scaleToFill
+    backgroundImage.backgroundColor = .white
+        return backgroundImage
+    }()
     
+     //MARK: LIFECYCLE
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            addSubView()
+           
+        }
+        
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(true)
+            contentViewConstraints()
+            recipeNameLabelConstraint()
+            recipeImageConstraints()
+            stepperLabelConstraints()
+            addToCartButtonConstraints()
+            goToCartConstraints()
+        }
+            
+        private func addSubView() {
+            view.addSubview(backgroundImageView)
+            view.addSubview(contentView)
+            contentView.addSubview(recipeLabel)
+            contentView.addSubview(recipeImage)
+            view.addSubview(stepperLabel)
+            view.addSubview(addToCartButton)
+            view.addSubview(goToCartButton)
+            
     
+    }
    
+    //MARK: CONSTRAINTS
+    
+    func recipeNameLabelConstraint() {
+        recipeLabel.anchors(top: contentView.topAnchor, bottom: contentView.topAnchor, left: contentView.leftAnchor, right: contentView.rightAnchor,paddingTop: 13, height: 35 )
+    }
+
+    func contentViewConstraints() {
+        contentView.anchors(top: view.topAnchor, bottom: view.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor,paddingTop: 120, paddingBottom: 240, paddingLeft: 15, paddingRight: 15)
+    }
+
+    func recipeImageConstraints() {
+        recipeImage.anchors(top: contentView.topAnchor, bottom: contentView.bottomAnchor, left: contentView.leftAnchor, right: contentView.rightAnchor, paddingTop: 100, paddingBottom: 120, paddingLeft: 50, paddingRight: 50)
+    }
    
+//    func stepperConstraints() {
+//
+//    }
     
-    
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-       
+    func stepperLabelConstraints() {
+        stepperLabel.anchors(top: recipeImage.bottomAnchor, right: contentView.rightAnchor, paddingTop: 47, paddingBottom: 50, paddingLeft: 150,paddingRight: 40, width: 65, height:25)
     }
     
-
-   
-
+    func goToCartConstraints() {
+        goToCartButton.anchors(top: recipeLabel.bottomAnchor, right: contentView.rightAnchor, paddingTop: 10, paddingBottom: 15, paddingLeft: 160, paddingRight: 15, width: 45, height: 45)
+    }
+    
+    func addToCartButtonConstraints() {
+        addToCartButton.anchors(top: contentView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 40, paddingBottom: 30, paddingLeft: 30, paddingRight: 30, height: 35)
+    }
+    
+    
 }
