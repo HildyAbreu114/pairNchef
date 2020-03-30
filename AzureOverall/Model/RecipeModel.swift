@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: MODEL
-struct Result: Codable {
+struct RecipeInfo: Codable {
     let id: Int?
     let title: String?
     let readyInMinutes: Int?
