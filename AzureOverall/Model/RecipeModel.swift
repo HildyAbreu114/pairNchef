@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+// MARK: MODEL
+struct Result: Codable {
+    let id: Int?
+    let title: String?
+    let readyInMinutes: Int?
+    let servings: Int?
+    let image: String?
+}
