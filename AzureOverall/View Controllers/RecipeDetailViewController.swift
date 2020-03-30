@@ -10,6 +10,12 @@ import UIKit
 
 class RecipeDetailViewController: UIViewController {
     
+    //MARK: VARIABLES
+    
+    var stepper: UIStepper!
+
+
+    
     
     //MARK: UI OBJECTS
     
@@ -56,6 +62,8 @@ class RecipeDetailViewController: UIViewController {
         return stepperValue
     }()
     
+
+    
     lazy var addToCartButton: UIButton = {
         let addCartButton = UIButton()
         addCartButton.setTitle("Add recipe to cart",for: .normal)
@@ -73,7 +81,6 @@ class RecipeDetailViewController: UIViewController {
         let image = UIImage(named:"shoppingCart3")as UIImage?
         let cartButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
         cartButton.setImage(image, for: .normal)
-        
         cartButton.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         cartButton.addTarget(self, action: Selector("buttonTapped"),for:.touchUpInside)
         return cartButton
@@ -87,6 +94,16 @@ class RecipeDetailViewController: UIViewController {
     backgroundImage.backgroundColor = .white
         return backgroundImage
     }()
+    
+    //MARK: FUNCTIONS
+    
+//    func stepper() {
+//        stepper = UIStepper()
+//        stepper.frame = CGRect
+//    }
+    
+    
+    
     
      //MARK: LIFECYCLE
         
