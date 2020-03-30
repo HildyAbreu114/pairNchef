@@ -17,7 +17,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         nameLabel.font = UIFont (name: "optima-bold", size: 18)
         nameLabel.text = "name"
         nameLabel.textAlignment = .center
-        nameLabel.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        nameLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         nameLabel.backgroundColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
         nameLabel.alpha = 0.4
         return nameLabel
@@ -29,7 +29,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         cellImage.clipsToBounds = true
         cellImage.layer.borderWidth = 1
 
-        cellImage.layer.borderColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
+        cellImage.layer.borderColor = #colorLiteral(red: 1, green: 0.8937508464, blue: 0.8871408105, alpha: 1)
         cellImage.layer.cornerRadius = 20
         cellImage.backgroundColor = .clear
        return cellImage
@@ -40,7 +40,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         servingLabel.font = UIFont (name: "optima-bold", size: 16)
         servingLabel.text = "serving"
         servingLabel.textAlignment = .center
-        servingLabel.textColor = .black
+        servingLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         servingLabel.backgroundColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
         servingLabel.alpha = 0.4
         return servingLabel
@@ -51,7 +51,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         prepLabel.font = UIFont (name: "optima-bold", size: 16)
         prepLabel.text = "prep"
         prepLabel.textAlignment = .center
-        prepLabel.textColor = .black
+        prepLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         prepLabel.backgroundColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
         prepLabel.alpha = 0.4
         return prepLabel
