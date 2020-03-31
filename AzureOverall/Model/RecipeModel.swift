@@ -9,10 +9,19 @@
 import Foundation
 
 // MARK: MODEL
-struct RecipeInfo: Codable {
-    let id: Int?
-    let title: String?
-    let readyInMinutes: Int?
-    let servings: Int?
-    let image: String?
+
+struct AllRecipes: Codable {
+    let results: [RecipeInfo]
 }
+struct RecipeInfo:Codable {
+    let id: Int
+    let title: String
+    let readyInMinutes: Int
+    let servings: Int
+    let image: String
+}
+
+
+
+
+

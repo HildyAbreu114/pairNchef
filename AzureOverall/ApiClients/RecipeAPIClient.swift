@@ -9,7 +9,7 @@
 import Foundation
 
 struct RecipeAPIClient {
-    static let shared = RecipeAPIClient()
+    static let manager = RecipeAPIClient()
     
     func getData(recipe:String, completionHandler:@escaping (Result<[RecipeInfo],AppError>) ->()){
         
@@ -27,9 +27,9 @@ struct RecipeAPIClient {
                             completionHandler(.failure(.noDataReceived))
                         case .success(let data):
                             do {
-                                let recipes = try JSONDecoder().decode([RecipeInfo].self, from: data)
-                                completionHandler(.success(recipes))
-                            }catch {
+                                let recipes = try JSONDecoder().decode(AllRecipes.self,from: data)
+                                completionHandler(.success(recipes.results))
+                            } catch {
                                 completionHandler(.failure(.couldNotParseJSON(rawError: error)))
                             }
                         }
