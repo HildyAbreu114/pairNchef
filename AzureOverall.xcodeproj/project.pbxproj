@@ -23,6 +23,7 @@
 		64E02620243161A20062AE15 /* RecipeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E0261F243161A20062AE15 /* RecipeAPIClient.swift */; };
 		64E0262224316E200062AE15 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E0262124316E200062AE15 /* Secret.swift */; };
 		64E02625243176650062AE15 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E02624243176650062AE15 /* RecipeModel.swift */; };
+		64E026282431A9A70062AE15 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E026272431A9A70062AE15 /* PersistenceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		64E0261F243161A20062AE15 /* RecipeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPIClient.swift; sourceTree = "<group>"; };
 		64E0262124316E200062AE15 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		64E02624243176650062AE15 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		64E026272431A9A70062AE15 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				64E0260C242FE1AB0062AE15 /* View Controllers */,
 				64E0260D242FE1D10062AE15 /* Cells */,
 				64E02614243147C20062AE15 /* Extensions */,
+				64E026262431A9650062AE15 /* Persistence */,
 				64E0261724315B740062AE15 /* Helpers */,
 				64E0261E243160FF0062AE15 /* ApiClients */,
 				64E025E9242E655B0062AE15 /* Assets.xcassets */,
@@ -172,6 +175,14 @@
 				64E02624243176650062AE15 /* RecipeModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		64E026262431A9650062AE15 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				64E026272431A9A70062AE15 /* PersistenceHelper.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				64E02605242EDF240062AE15 /* Anchors.swift in Sources */,
 				64E0262224316E200062AE15 /* Secret.swift in Sources */,
 				64E02613243146170062AE15 /* ShoppingCartViewController.swift in Sources */,
+				64E026282431A9A70062AE15 /* PersistenceHelper.swift in Sources */,
 				64E02625243176650062AE15 /* RecipeModel.swift in Sources */,
 				64E0261B24315E6D0062AE15 /* NetworkManager.swift in Sources */,
 				64E0261924315E570062AE15 /* AppError.swift in Sources */,
