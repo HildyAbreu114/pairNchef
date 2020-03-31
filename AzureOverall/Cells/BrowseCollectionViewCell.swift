@@ -18,7 +18,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         nameLabel.text = "name"
         nameLabel.textAlignment = .center
         nameLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
-        nameLabel.backgroundColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
+        nameLabel.backgroundColor = #colorLiteral(red: 0.9177966714, green: 0.6097382903, blue: 0.5848943591, alpha: 1)
         nameLabel.alpha = 0.4
         return nameLabel
     }()
@@ -27,8 +27,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         let cellImage = UIImageView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         cellImage.contentMode = .scaleAspectFill
         cellImage.clipsToBounds = true
-        cellImage.layer.borderWidth = 1
-
+        cellImage.layer.borderWidth = 2
         cellImage.layer.borderColor = #colorLiteral(red: 1, green: 0.8937508464, blue: 0.8871408105, alpha: 1)
         cellImage.layer.cornerRadius = 20
         cellImage.backgroundColor = .clear
@@ -41,7 +40,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         servingLabel.text = "serving"
         servingLabel.textAlignment = .center
         servingLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
-        servingLabel.backgroundColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
+        servingLabel.backgroundColor = #colorLiteral(red: 0.9213426709, green: 0.6355389357, blue: 0.6106185317, alpha: 1)
         servingLabel.alpha = 0.4
         return servingLabel
     }()
@@ -52,7 +51,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         prepLabel.text = "prep"
         prepLabel.textAlignment = .center
         prepLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
-        prepLabel.backgroundColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
+        prepLabel.backgroundColor = #colorLiteral(red: 0.9168686271, green: 0.6357840896, blue: 0.6107411981, alpha: 1)
         prepLabel.alpha = 0.4
         return prepLabel
         }()

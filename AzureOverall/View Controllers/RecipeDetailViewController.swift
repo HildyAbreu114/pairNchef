@@ -37,8 +37,8 @@ class RecipeDetailViewController: UIViewController {
     lazy var contentView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 20
-        view.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
-        view.alpha = 0.3
+        view.backgroundColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
+        view.alpha = 0.5
         return view
     }()
     
@@ -49,7 +49,7 @@ class RecipeDetailViewController: UIViewController {
            cellImage.layer.borderWidth = 2
            cellImage.layer.borderColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
            cellImage.layer.cornerRadius = 20
-           cellImage.backgroundColor = .clear
+//           cellImage.backgroundColor = .clear
           return cellImage
        }()
     
