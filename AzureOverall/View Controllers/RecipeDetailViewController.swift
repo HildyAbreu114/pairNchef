@@ -89,7 +89,7 @@ class RecipeDetailViewController: UIViewController {
         let cartButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
         cartButton.setImage(image, for: .normal)
         cartButton.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        cartButton.addTarget(self, action: Selector("buttonTapped"),for:.touchUpInside)
+        cartButton.addTarget(self, action: #selector(buttonTapped), for:.touchUpInside)
         return cartButton
     }()
     
@@ -120,6 +120,16 @@ class RecipeDetailViewController: UIViewController {
             addToCartButtonConstraints()
             shoppingCartConstraints()
         }
+    
+//    MARK: OBJC FUNCTION
+    
+     @objc func buttonTapped(sender: UIButton) {
+       let shoppingCart = ShoppingCartViewController()
+        present(shoppingCart, animated: true, completion: nil)
+    }
+//    navigationController?.pushViewController(animated: true)
+
+    
         
       //MARK: PRIVATE FUNCTIONS
     
