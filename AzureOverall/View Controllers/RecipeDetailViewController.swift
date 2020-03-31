@@ -84,7 +84,7 @@ class RecipeDetailViewController: UIViewController {
         addCartButton.layer.borderColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         return addCartButton
     }()
-    lazy var goToCartButton: UIButton = {
+    lazy var shoppingCartButton: UIButton = {
         let image = UIImage(named:"shoppingCart3")as UIImage?
         let cartButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
         cartButton.setImage(image, for: .normal)
@@ -102,15 +102,6 @@ class RecipeDetailViewController: UIViewController {
         return backgroundImage
     }()
     
-    //MARK: FUNCTIONS
-    
-//    func stepper() {
-//        stepper = UIStepper()
-//        stepper.frame = CGRect
-//    }
-    
-    
-    
     
      //MARK: LIFECYCLE
         
@@ -127,7 +118,7 @@ class RecipeDetailViewController: UIViewController {
             recipeImageConstraints()
             stepperLabelConstraints()
             addToCartButtonConstraints()
-            goToCartConstraints()
+            shoppingCartConstraints()
         }
         
       //MARK: PRIVATE FUNCTIONS
@@ -139,7 +130,7 @@ class RecipeDetailViewController: UIViewController {
             contentView.addSubview(recipeImage)
             view.addSubview(stepperLabel)
             view.addSubview(addToCartButton)
-            view.addSubview(goToCartButton)
+            view.addSubview(shoppingCartButton)
     }
    
     
@@ -178,8 +169,8 @@ class RecipeDetailViewController: UIViewController {
         stepperLabel.anchors(top: recipeImage.bottomAnchor, right: contentView.rightAnchor, paddingTop: 47, paddingBottom: 50, paddingLeft: 150,paddingRight: 40, width: 65, height:25)
     }
     
-    func goToCartConstraints() {
-        goToCartButton.anchors(top: recipeLabel.bottomAnchor, right: contentView.rightAnchor, paddingTop: 10, paddingBottom: 15, paddingLeft: 160, paddingRight: 15, width: 45, height: 45)
+    func shoppingCartConstraints() {
+        shoppingCartButton.anchors(top: recipeLabel.bottomAnchor, right: contentView.rightAnchor, paddingTop: 10, paddingBottom: 15, paddingLeft: 160, paddingRight: 15, width: 45, height: 45)
     }
     
     func addToCartButtonConstraints() {
