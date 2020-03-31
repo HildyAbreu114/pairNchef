@@ -95,6 +95,13 @@ class BrowseRecipeViewController: UIViewController {
         }
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let single = recipes[indexPath.row]
+            let DetailViewController = RecipeDetailViewController()
+        DetailViewController.detail = [single]
+            navigationController?.pushViewController(DetailViewController, animated: true)
+        
+    }
 
 //MARK: CONSTRAINTS
 

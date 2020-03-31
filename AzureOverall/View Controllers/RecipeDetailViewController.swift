@@ -12,6 +12,8 @@ class RecipeDetailViewController: UIViewController {
     
     //MARK: VARIABLES
     
+    var detail = [RecipeInfo]()
+    
     var stepper: UIStepper!
 
 
