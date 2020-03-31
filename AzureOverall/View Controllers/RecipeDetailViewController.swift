@@ -12,7 +12,12 @@ class RecipeDetailViewController: UIViewController {
     
     //MARK: VARIABLES
     
-    var detail = [RecipeInfo]()
+    var detail : RecipeInfo!{
+        didSet{
+            loadDetailData()
+        }
+    }
+    
     
     var stepper: UIStepper!
 
@@ -124,7 +129,9 @@ class RecipeDetailViewController: UIViewController {
             addToCartButtonConstraints()
             goToCartConstraints()
         }
-            
+        
+      //MARK: PRIVATE FUNCTIONS
+    
         private func addSubView() {
             view.addSubview(backgroundImageView)
             view.addSubview(contentView)
@@ -133,10 +140,22 @@ class RecipeDetailViewController: UIViewController {
             view.addSubview(stepperLabel)
             view.addSubview(addToCartButton)
             view.addSubview(goToCartButton)
-            
-    
     }
    
+    
+    //    func stepper() {
+    //        stepper = UIStepper()
+    //        stepper.frame = CGRect
+    //    }
+    
+    private func loadDetailData() {
+        self.recipeLabel.text = detail.title
+        let imageString = "https://spoonacular.com/recipeImages/\(detail.image)"
+        recipeImage.kf.setImage(with: URL(string: imageString))
+        
+    }
+    
+    
     //MARK: CONSTRAINTS
     
     func recipeNameLabelConstraint() {

@@ -136,10 +136,6 @@ extension BrowseRecipeViewController:UICollectionViewDataSource {
         cell.prepTimeLabel.text = "Prepare Time: \(recipe.readyInMinutes )"
         let imageString = "https://spoonacular.com/recipeImages/\(recipe.image)"
         cell.image.kf.setImage(with: URL(string: imageString))
-        
-        
-        
-
         return cell
     }
 }
