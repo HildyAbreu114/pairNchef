@@ -10,6 +10,16 @@ import UIKit
 
 class BrowseRecipeViewController: UIViewController {
     
+    //MARK: VARIABLES
+    
+    var recipes  = [RecipeInfo](){
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+   
+    
+    
     //    MARK: UI OBJECTS
     
     lazy var searchBar: UISearchBar = {
@@ -56,13 +66,32 @@ class BrowseRecipeViewController: UIViewController {
         collectionViewConstraint()
     }
         
+    
+    // MARK: PRIVATE FUNCTIONS
+    
     private func addSubView() {
         view.addSubview(backgroundImageView)
-
         view.addSubview(searchBar)
-        
         view.addSubview(collectionView)
 }
+    private func setDelegate() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
+    private func loadRecipeData(recipe:String) {
+        RecipeAPIClient.manager.getData(recipe: recipe) { (result) in
+            switch result {
+            case.success(let recipesData):
+                DispatchQueue.main.async {
+                    self.recipes = recipesData
+                }
+            case.failure(let error):
+                print(error)
+                
+            }
+        }
+    }
 
 
 //MARK: CONSTRAINTS
@@ -87,11 +116,16 @@ extension BrowseRecipeViewController: UICollectionViewDelegate {
 
 extension BrowseRecipeViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return recipes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "browseCell", for: indexPath) as? BrowseCollectionViewCell else {return UICollectionViewCell()}
+        let recipe = recipes[indexPath.row]
+        cell.nLabel.text = recipe.title
+        cell.servingSizeLabel.text = "Serving Size: \(recipe.servings)"
+        cell.prepTimeLabel.text = "Prepare Time: \(recipe.readyInMinutes )"
+//        cell.image = recipeCollection?.image
         return cell
     }
 }
