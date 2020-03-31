@@ -5,7 +5,7 @@
 //  Created by hildy abreu on 3/27/20.
 //  Copyright © 2020 hildy abreu. All rights reserved.
 //
-import Foundation
+import Kingfisher
 import UIKit
 
 class BrowseRecipeViewController: UIViewController {
@@ -58,7 +58,7 @@ class BrowseRecipeViewController: UIViewController {
         super.viewDidLoad()
         addSubView()
        setDelegate()
-//        loadRecipeData(recipe: "pasta")
+        loadRecipeData(recipe: "pasta")
        
     }
     
@@ -127,7 +127,12 @@ extension BrowseRecipeViewController:UICollectionViewDataSource {
         cell.nLabel.text = recipe.title
         cell.servingSizeLabel.text = "Serving Size: \(recipe.servings)"
         cell.prepTimeLabel.text = "Prepare Time: \(recipe.readyInMinutes )"
-//        cell.image = recipeCollection?.image
+        let imageString = "https://spoonacular.com/recipeImages/\(recipe.image)"
+        cell.image.kf.setImage(with: URL(string: imageString))
+        
+        
+        
+
         return cell
     }
 }
