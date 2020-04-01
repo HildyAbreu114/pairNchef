@@ -10,12 +10,13 @@ import UIKit
 
 class BrowseCollectionViewCell: UICollectionViewCell {
     
-    //MARK:-------- UI OBJECTS
+    //MARK: UI OBJECTS
     
     lazy var nLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.font = UIFont (name: "optima-bold", size: 18)
         nameLabel.text = "name"
+        nameLabel.adjustsFontSizeToFitWidth = true
         nameLabel.textAlignment = .center
         nameLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         nameLabel.backgroundColor = #colorLiteral(red: 0.9177966714, green: 0.6097382903, blue: 0.5848943591, alpha: 1)

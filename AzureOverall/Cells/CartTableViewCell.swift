@@ -31,7 +31,7 @@ class CartTableViewCell: UITableViewCell {
         totalLabel.textAlignment = .center
         totalLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         totalLabel.backgroundColor = #colorLiteral(red: 0.9213426709, green: 0.6355389357, blue: 0.6106185317, alpha: 1)
-        totalLabel.alpha = 0.5
+        totalLabel.alpha = 0.6
         totalLabel
     }()
     
@@ -39,10 +39,11 @@ class CartTableViewCell: UITableViewCell {
         let titleLabel = UILabel()
         titleLabel.font = UIFont (name: "optima-bold", size: 14)
         titleLabel.text = "serving"
+        titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.textAlignment = .center
         titleLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         titleLabel.backgroundColor = #colorLiteral(red: 0.9213426709, green: 0.6355389357, blue: 0.6106185317, alpha: 1)
-        titleLabel.alpha = 0.5
+        titleLabel.alpha = 0.6
         return titleLabel
     }()
  
