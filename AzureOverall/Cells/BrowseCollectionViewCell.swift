@@ -19,7 +19,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         nameLabel.textAlignment = .center
         nameLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         nameLabel.backgroundColor = #colorLiteral(red: 0.9177966714, green: 0.6097382903, blue: 0.5848943591, alpha: 1)
-        nameLabel.alpha = 0.4
+        nameLabel.alpha = 0.5
         return nameLabel
     }()
     
@@ -41,7 +41,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         servingLabel.textAlignment = .center
         servingLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         servingLabel.backgroundColor = #colorLiteral(red: 0.9213426709, green: 0.6355389357, blue: 0.6106185317, alpha: 1)
-        servingLabel.alpha = 0.4
+        servingLabel.alpha = 0.5
         return servingLabel
     }()
     
@@ -52,7 +52,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
         prepLabel.textAlignment = .center
         prepLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
         prepLabel.backgroundColor = #colorLiteral(red: 0.9168686271, green: 0.6357840896, blue: 0.6107411981, alpha: 1)
-        prepLabel.alpha = 0.4
+        prepLabel.alpha = 0.5
         return prepLabel
         }()
 
