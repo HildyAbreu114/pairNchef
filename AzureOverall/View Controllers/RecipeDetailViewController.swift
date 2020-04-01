@@ -125,9 +125,9 @@ class RecipeDetailViewController: UIViewController {
     
      @objc func buttonTapped(sender: UIButton) {
        let shoppingCart = ShoppingCartViewController()
-        present(shoppingCart, animated: true, completion: nil)
-    }
-//    navigationController?.pushViewController(animated: true)
+        navigationController?.pushViewController(shoppingCart, animated: true)
+}
+
 
     
         

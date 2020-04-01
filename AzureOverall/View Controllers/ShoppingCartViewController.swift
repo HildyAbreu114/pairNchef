@@ -10,24 +10,61 @@ import UIKit
 
 class ShoppingCartViewController: UIViewController {
     
+    //MARK: VARIABLE
     
+    var cartRecipe = [RecipeInfo]()
+    
+    //MARK: UI OBJECT
+    
+    lazy var shoppingCartTableview: UITableView = {
+    let cartTableView = UITableView()
+    cartTableView.register(ShoppingCartTableViewCell.self, forCellWithReuseIdentifier: "CartCell")
+    return cartTableView
+    }()
 
+    //MARK: LIFECYCLE
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSubView()
+        setDelegate()
         view.backgroundColor = .green
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   //MARK: PRIVATE FUNCTION
+    
+    private func addSubView() {
+        view.addSubview(shoppingCartTableview)
     }
-    */
-
+   
+    private func setDelegate() {
+        shoppingCartTableview.delegate = self
+        shoppingCartTableview.dataSource = self
+    }
+   
+  
+   
+    //MARK: CONSTRAINTS
+      
+      func shoppingCartTVConstraints() {
+          shoppingCartTableview.anchors(top: view.topAnchor, bottom: view.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 80, paddingBottom: 80, paddingLeft: 10, paddingRight: 10)
+      }
+      
 }
+//MARK: EXTENSIONS
+   
+   extension ShoppingCartViewController: UITableViewDelegate {
+       
+   }
+   
+extension ShoppingCartViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cartRecipe.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+       
+   }
