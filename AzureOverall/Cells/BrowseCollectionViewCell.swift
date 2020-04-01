@@ -61,7 +61,7 @@ class BrowseCollectionViewCell: UICollectionViewCell {
     
     
     
-    //MARK: -------- LIFECYCLE
+    //MARK: LIFECYCLE
     
     override init(frame:CGRect) {
     super.init(frame:frame)
