@@ -18,7 +18,7 @@ class ShoppingCartViewController: UIViewController {
     
     lazy var shoppingCartTableview: UITableView = {
     let cartTableView = UITableView()
-    cartTableView.register(ShoppingCartTableViewCell.self, forCellWithReuseIdentifier: "CartCell")
+        cartTableView.register(CartTableViewCell.self, forCellReuseIdentifier: "CartCell")
     return cartTableView
     }()
 
