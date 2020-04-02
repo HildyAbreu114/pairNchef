@@ -21,6 +21,13 @@ class ShoppingCartViewController: UIViewController {
         cartTableView.register(CartTableViewCell.self, forCellReuseIdentifier: "CartCell")
     return cartTableView
     }()
+    
+    lazy var background: UIView = {
+        let background = UIView()
+        background.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
+        background.alpha = 0.4
+        return background
+    }()
 
     //MARK: LIFECYCLE
     
@@ -28,13 +35,20 @@ class ShoppingCartViewController: UIViewController {
         super.viewDidLoad()
         addSubView()
         setDelegate()
-        view.backgroundColor = .green
+        view.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        shoppingCartTVConstraints()
     }
     
    //MARK: PRIVATE FUNCTION
     
     private func addSubView() {
-        view.addSubview(shoppingCartTableview)
+         view.addSubview(background)
+         view.addSubview(shoppingCartTableview)
+        
     }
    
     private func setDelegate() {
@@ -63,8 +77,20 @@ extension ShoppingCartViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as? CartTableViewCell else {return UITableViewCell()}
+                let cart = cartRecipe[indexPath.row]
+                cell.recipeTitleLabel.text = cart.title
+//        cell.totalAmountLabel.text = "Total amount: \(cart.)"
+               let imageString = "https://spoonacular.com/recipeImages/\(cart.image)"
+                cell.recipeImage.kf.setImage(with: URL(string: imageString))
+                return cell
+            }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
     }
+        }
+    
     
        
-   }
+   
