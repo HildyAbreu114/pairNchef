@@ -129,6 +129,7 @@ class RecipeDetailViewController: UIViewController {
             stepperLabelConstraints()
             addToCartButtonConstraints()
             shoppingCartConstraints()
+            stepperConstraints()
         }
     
 //    MARK: OBJC FUNCTION
