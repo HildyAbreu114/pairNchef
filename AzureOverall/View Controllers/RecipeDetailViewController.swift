@@ -19,7 +19,7 @@ class RecipeDetailViewController: UIViewController {
     }
     
     
-    var stepper: UIStepper!
+//    var stepper: UIStepper!
 
 
     
@@ -63,13 +63,22 @@ class RecipeDetailViewController: UIViewController {
         stepperValue.textAlignment = .center
         stepperValue.text = "0"
         stepperValue.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
-        stepperValue.alpha = 0.4
+        stepperValue.alpha = 0.5
         stepperValue.layer.cornerRadius = 20
         stepperValue.backgroundColor = #colorLiteral(red: 1, green: 0.8937508464, blue: 0.8871408105, alpha: 1)
         return stepperValue
     }()
     
-
+    lazy var stepper: UIStepper = {
+        let stepper = UIStepper()
+        stepper.minimumValue = 0
+        stepper.maximumValue = 55
+        stepper.isContinuous = true
+        stepper.addTarget(self, action: #selector(setStepperValue), for:.touchUpInside)
+        stepper.tintColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
+        return stepper
+    }()
+        
     
     lazy var addToCartButton: UIButton = {
         let addCartButton = UIButton()
@@ -108,6 +117,7 @@ class RecipeDetailViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             addSubView()
+            
            
         }
         
@@ -128,7 +138,10 @@ class RecipeDetailViewController: UIViewController {
         navigationController?.pushViewController(shoppingCart, animated: true)
 }
 
-
+    @objc func setStepperValue(sender: UIStepper) {
+        let value = Int(sender.value)
+        stepperLabel.text = "\(value)"
+           }
     
         
       //MARK: PRIVATE FUNCTIONS
@@ -141,13 +154,10 @@ class RecipeDetailViewController: UIViewController {
             view.addSubview(stepperLabel)
             view.addSubview(addToCartButton)
             view.addSubview(shoppingCartButton)
+            view.addSubview(stepper)
+           
     }
-   
-    
-    //    func stepper() {
-    //        stepper = UIStepper()
-    //        stepper.frame = CGRect
-    //    }
+
     
     private func loadDetailData() {
         self.recipeLabel.text = detail.title
@@ -171,9 +181,9 @@ class RecipeDetailViewController: UIViewController {
         recipeImage.anchors(top: contentView.topAnchor, bottom: contentView.bottomAnchor, left: contentView.leftAnchor, right: contentView.rightAnchor, paddingTop: 100, paddingBottom: 120, paddingLeft: 50, paddingRight: 50)
     }
    
-//    func stepperConstraints() {
-//
-//    }
+    func stepperConstraints() {
+        stepper.anchors(top: recipeImage.bottomAnchor, left: contentView.leftAnchor, paddingTop: 47, paddingBottom: 50, paddingLeft: 40, paddingRight: 150, width: 85, height: 25)
+    }
     
     func stepperLabelConstraints() {
         stepperLabel.anchors(top: recipeImage.bottomAnchor, right: contentView.rightAnchor, paddingTop: 47, paddingBottom: 50, paddingLeft: 150,paddingRight: 40, width: 65, height:25)
