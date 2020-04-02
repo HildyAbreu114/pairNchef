@@ -74,6 +74,14 @@ required init?(coder: NSCoder) {
     
     func totalAmountLabelConstraint() {
         recipeImage.addSubview(totalAmountLabel)
-        totalAmountLabel.anchors(top: recipeTitleLabel.topAnchor, bottom: recipeImage.bottomAnchor, left: <#T##NSLayoutXAxisAnchor?#>, right: recipeImage.rightAnchor, paddingLeft: 120)
-    }
+               totalAmountLabel.translatesAutoresizingMaskIntoConstraints = false
+               
+               NSLayoutConstraint.activate(
+                   [totalAmountLabel.trailingAnchor.constraint(equalTo: recipeImage.trailingAnchor,constant: 0),
+                    totalAmountLabel.topAnchor.constraint(equalTo: recipeTitleLabel.bottomAnchor,constant: 0),
+                    totalAmountLabel.bottomAnchor.constraint(equalTo: recipeImage.bottomAnchor, constant: 0), totalAmountLabel.heightAnchor.constraint(equalToConstant: 75), totalAmountLabel.widthAnchor.constraint(equalToConstant: (recipeImage.frame.width/2)-20)])
+               
+           }
+        
+
 }
