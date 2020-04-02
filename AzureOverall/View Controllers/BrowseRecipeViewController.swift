@@ -57,7 +57,7 @@ class BrowseRecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubView()
-       setDelegate()
+        setDelegate()
         loadRecipeData(recipe: "pasta")
        
     }
