@@ -22,13 +22,12 @@ class BrowseRecipeViewController: UIViewController {
     
     //    MARK: UI OBJECTS
     
-    lazy var searchBar: UISearchBar = {
+    lazy var browseSearchBar: UISearchBar = {
         let searchRecipe = UISearchBar()
         searchRecipe.isTranslucent = true
         searchRecipe.barTintColor = #colorLiteral(red: 1, green: 0.8978595138, blue: 0.891151607, alpha: 1)
         searchRecipe.alpha = 0.7
         searchRecipe.placeholder = "Search for your recipe here!"
-        
         return searchRecipe
     }()
     
@@ -58,7 +57,7 @@ class BrowseRecipeViewController: UIViewController {
         super.viewDidLoad()
         addSubView()
         setDelegate()
-        loadRecipeData(recipe: "pasta")
+//       c loadRecipeData(recipe: "rice")
        
     }
     
@@ -73,12 +72,13 @@ class BrowseRecipeViewController: UIViewController {
     
     private func addSubView() {
         view.addSubview(backgroundImageView)
-        view.addSubview(searchBar)
+        view.addSubview(browseSearchBar)
         view.addSubview(collectionView)
 }
     private func setDelegate() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        browseSearchBar.delegate = self
     }
     
     private func loadRecipeData(recipe:String) {
@@ -106,18 +106,29 @@ class BrowseRecipeViewController: UIViewController {
 //MARK: CONSTRAINTS
 
   func searchBarConstraint() {
-    searchBar.anchors(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop:80, paddingLeft: 15, paddingRight: 15, height: 50)
+    browseSearchBar.anchors(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop:80, paddingLeft: 15, paddingRight: 15, height: 50)
     }
 
 
 func collectionViewConstraint(){
-    collectionView.anchors(top: searchBar.bottomAnchor, bottom: view.bottomAnchor, left:view.leftAnchor, right: view.rightAnchor, paddingBottom: 80, paddingLeft: 15, paddingRight: 15)
+    collectionView.anchors(top: browseSearchBar.bottomAnchor, bottom: view.bottomAnchor, left:view.leftAnchor, right: view.rightAnchor, paddingBottom: 80, paddingLeft: 15, paddingRight: 15)
     
 
 }
 }
 
 //MARK: EXTENSIONS
+
+ extension BrowseRecipeViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        loadRecipeData(recipe: searchBar.text!)
+        
+//        if searchText.isEmpty ==  {
+//            print("okay")
+//        }
+    }
+    
+}
 
 extension BrowseRecipeViewController: UICollectionViewDelegate {
     
