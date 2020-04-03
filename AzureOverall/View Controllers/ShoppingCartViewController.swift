@@ -104,7 +104,11 @@ extension ShoppingCartViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as? CartTableViewCell else {return UITableViewCell()}
                 let cart = cartRecipe[indexPath.row]
                 cell.recipeTitleLabel.text = cart.title
-        cell.totalAmountLabel.text = "Total amount: \(cart.numInCart)"
+        if let numInCart = cart.numInCart{
+            cell.totalAmountLabel.text = "Total amount: \(numInCart)"
+
+            
+        }
                let imageString = "https://spoonacular.com/recipeImages/\(cart.image)"
                 cell.recipeImage.kf.setImage(with: URL(string: imageString))
                 return cell

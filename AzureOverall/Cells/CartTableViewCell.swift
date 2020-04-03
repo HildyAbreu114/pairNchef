@@ -13,7 +13,7 @@ class CartTableViewCell: UITableViewCell {
     //MARK: UI OBJECTS
     
     lazy var recipeImage : UIImageView = {
-        let cartImage = UIImageView()
+        let cartImage = UIImageView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         cartImage.contentMode = .scaleAspectFill
         cartImage.clipsToBounds = true
         cartImage.layer.cornerRadius = 15
@@ -64,6 +64,7 @@ required init?(coder: NSCoder) {
     //MARK: CONSTRAINTS
     
     func recipeImageConstraints() {
+        self.addSubview(recipeImage)
         recipeImage.anchors(top: self.topAnchor, bottom: self.bottomAnchor, left: self.leftAnchor, right: self.rightAnchor, paddingTop: 10, paddingBottom: 10, paddingLeft: 10, paddingRight: 10)
     }
     
@@ -79,7 +80,7 @@ required init?(coder: NSCoder) {
                NSLayoutConstraint.activate(
                    [totalAmountLabel.trailingAnchor.constraint(equalTo: recipeImage.trailingAnchor,constant: 0),
                     totalAmountLabel.topAnchor.constraint(equalTo: recipeTitleLabel.bottomAnchor,constant: 0),
-                    totalAmountLabel.bottomAnchor.constraint(equalTo: recipeImage.bottomAnchor, constant: 0), totalAmountLabel.heightAnchor.constraint(equalToConstant: 75), totalAmountLabel.widthAnchor.constraint(equalToConstant: (recipeImage.frame.width/2)-20)])
+                    totalAmountLabel.bottomAnchor.constraint(equalTo: recipeImage.bottomAnchor, constant: 0),  totalAmountLabel.widthAnchor.constraint(equalToConstant: (recipeImage.frame.width/2))])
                
            }
         
