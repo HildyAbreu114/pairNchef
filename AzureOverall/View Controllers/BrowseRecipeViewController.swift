@@ -45,7 +45,7 @@ class BrowseRecipeViewController: UIViewController {
             backgroundImage.layer.cornerRadius = 20
             backgroundImage.image = #imageLiteral(resourceName: "4")
             backgroundImage.contentMode = UIView.ContentMode.scaleToFill
-        backgroundImage.backgroundColor = .white
+            backgroundImage.backgroundColor = .white
             return backgroundImage
         }()
 
@@ -112,9 +112,7 @@ class BrowseRecipeViewController: UIViewController {
 
 func collectionViewConstraint(){
     collectionView.anchors(top: browseSearchBar.bottomAnchor, bottom: view.bottomAnchor, left:view.leftAnchor, right: view.rightAnchor, paddingBottom: 80, paddingLeft: 15, paddingRight: 15)
-    
-
-}
+    }
 }
 
 //MARK: EXTENSIONS
@@ -122,11 +120,7 @@ func collectionViewConstraint(){
  extension BrowseRecipeViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         loadRecipeData(recipe: searchBar.text!)
-        
-//        if searchText.isEmpty ==  {
-//            print("okay")
-//        }
-    }
+        }
     
 }
 
@@ -162,4 +156,8 @@ extension BrowseRecipeViewController: UICollectionViewDelegateFlowLayout {
      
     return UIEdgeInsets(top: 4.0,left: 4.0,bottom: 4.0,right: 4.0)
   }
+    
+   
+
 }
+

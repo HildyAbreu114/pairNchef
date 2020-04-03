@@ -35,6 +35,7 @@ class ShoppingCartViewController: UIViewController {
         super.viewDidLoad()
         addSubView()
         setDelegate()
+//        loadCartData(recipe: String)
         view.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
     }
     
@@ -80,14 +81,14 @@ extension ShoppingCartViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as? CartTableViewCell else {return UITableViewCell()}
                 let cart = cartRecipe[indexPath.row]
                 cell.recipeTitleLabel.text = cart.title
-//        cell.totalAmountLabel.text = "Total amount: \(cart.)"
+        cell.totalAmountLabel.text = "Total amount: \(cart.numInCart)"
                let imageString = "https://spoonacular.com/recipeImages/\(cart.image)"
                 cell.recipeImage.kf.setImage(with: URL(string: imageString))
                 return cell
             }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 300
     }
         }
     

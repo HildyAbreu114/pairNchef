@@ -18,12 +18,7 @@ class RecipeDetailViewController: UIViewController {
         }
     }
     
-    
-//    var stepper: UIStepper!
 
-
-    
-    
     //MARK: UI OBJECTS
     
     lazy var recipeLabel: UILabel = {
@@ -156,6 +151,7 @@ class RecipeDetailViewController: UIViewController {
             view.addSubview(addToCartButton)
             view.addSubview(shoppingCartButton)
             view.addSubview(stepper)
+            
            
     }
 
