@@ -130,7 +130,7 @@ class RecipeDetailViewController: UIViewController {
     
 //    MARK: OBJC FUNCTION
     
-     @objc func buttonTapped(sender: UIButton) {
+     @objc func cartButtonTapped(sender: UIButton) {
        let shoppingCart = ShoppingCartViewController()
         navigationController?.pushViewController(shoppingCart, animated: true)
 }
@@ -140,7 +140,17 @@ class RecipeDetailViewController: UIViewController {
         stepperLabel.text = "\(value)"
            }
     
-        
+    @objc func saveToAddToCart(sender:UIButton){
+        do {
+        let singleRecipe = RecipeInfo(id: detail.id, title: detail.title, readyInMinutes: detail.readyInMinutes, servings: detail.servings, image: detail.image, numInCart: Int(stepper.value))
+        try AddToCartPersistenceHelper.manager.save(newRecipe: singleRecipe)
+            print("successful")
+        }catch{
+        print(error)
+
+        }
+
+    }
       //MARK: PRIVATE FUNCTIONS
     
         private func addSubView() {
