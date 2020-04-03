@@ -57,7 +57,7 @@ class BrowseRecipeViewController: UIViewController {
         super.viewDidLoad()
         addSubView()
         setDelegate()
-//       c loadRecipeData(recipe: "rice")
+
        
     }
     
