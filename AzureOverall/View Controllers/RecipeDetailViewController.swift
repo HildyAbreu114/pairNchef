@@ -86,6 +86,7 @@ class RecipeDetailViewController: UIViewController {
         addCartButton.layer.cornerRadius = 20
         addCartButton.layer.borderWidth = 2
         addCartButton.layer.borderColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
+        addCartButton.addTarget(self, action: #selector(saveToAddToCart),for:.touchUpInside)
         return addCartButton
     }()
     lazy var shoppingCartButton: UIButton = {
@@ -93,7 +94,7 @@ class RecipeDetailViewController: UIViewController {
         let cartButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
         cartButton.setImage(image, for: .normal)
         cartButton.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        cartButton.addTarget(self, action: #selector(buttonTapped), for:.touchUpInside)
+        cartButton.addTarget(self, action: #selector(cartButtonTapped), for:.touchUpInside)
         return cartButton
     }()
     
