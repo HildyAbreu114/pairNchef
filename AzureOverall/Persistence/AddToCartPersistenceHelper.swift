@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+struct AddToCartPersistenceHelper {
+    
+    private static var detailRec = [RecipeInfo]()
+    
+    static let manager = AddToCartPersistenceHelper()
+    func save(newRecipe: RecipeInfo) throws {
+        try persistenceHelper.save(newElement: newRecipe)
+    }
+    func getRecipe() throws -> [RecipeInfo] {
+        return try persistenceHelper.getObjects()
+    }
+    func delete(index: Int) throws {
+        return try persistenceHelper.deleteAtIndex(index: index)
+    }
+    
+    private let persistenceHelper = PersistenceHelper<RecipeInfo>(fileName: "addsToCart.plist")
+    private init() {}
+}

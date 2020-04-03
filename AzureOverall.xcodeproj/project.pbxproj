@@ -27,6 +27,7 @@
 		64E02625243176650062AE15 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E02624243176650062AE15 /* RecipeModel.swift */; };
 		64E026282431A9A70062AE15 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E026272431A9A70062AE15 /* PersistenceHelper.swift */; };
 		64E0262C24343CA50062AE15 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E0262B24343CA50062AE15 /* CartTableViewCell.swift */; };
+		64E0262E2436CA520062AE15 /* AddToCartPersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E0262D2436CA520062AE15 /* AddToCartPersistenceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		64E02624243176650062AE15 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		64E026272431A9A70062AE15 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		64E0262B24343CA50062AE15 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		64E0262D2436CA520062AE15 /* AddToCartPersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartPersistenceHelper.swift; sourceTree = "<group>"; };
 		657316586A3F26E4A7B748C3 /* Pods-AzureOverallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzureOverallTests.debug.xcconfig"; path = "Target Support Files/Pods-AzureOverallTests/Pods-AzureOverallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		757B8BD5E613D41674EF9CBA /* Pods_AzureOverall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AzureOverall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		814629CC13EA43444373F8A8 /* Pods_AzureOverallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AzureOverallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				64E026272431A9A70062AE15 /* PersistenceHelper.swift */,
+				64E0262D2436CA520062AE15 /* AddToCartPersistenceHelper.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				64E02616243148890062AE15 /* ActivitySpinner.swift in Sources */,
 				64E02609242F1F6A0062AE15 /* BrowseCollectionViewCell.swift in Sources */,
 				64E0260B242FE1950062AE15 /* RecipeDetailViewController.swift in Sources */,
+				64E0262E2436CA520062AE15 /* AddToCartPersistenceHelper.swift in Sources */,
 				64E0262C24343CA50062AE15 /* CartTableViewCell.swift in Sources */,
 				64E025E3242E655A0062AE15 /* SceneDelegate.swift in Sources */,
 				64E02620243161A20062AE15 /* RecipeAPIClient.swift in Sources */,
