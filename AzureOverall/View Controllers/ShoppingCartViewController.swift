@@ -67,20 +67,9 @@ class ShoppingCartViewController: UIViewController {
     }
     
     
-    private func loadCartData(recipe:String) {
-    RecipeAPIClient.manager.getData(recipe: recipe) { (result) in
-        switch result {
-        case.success(let recipesData):
-            DispatchQueue.main.async {
-                self.cartRecipe = recipesData
-            }
-        case.failure(let error):
-            print(error)
 
-        }
-    }
 
-}
+
    
     //MARK: CONSTRAINTS
       
