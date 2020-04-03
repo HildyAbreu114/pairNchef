@@ -35,7 +35,7 @@ class ShoppingCartViewController: UIViewController {
         super.viewDidLoad()
         addSubView()
         setDelegate()
-//        loadCartData(recipe: String)
+        loadAdded()
         view.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
     }
     
@@ -56,8 +56,31 @@ class ShoppingCartViewController: UIViewController {
         shoppingCartTableview.delegate = self
         shoppingCartTableview.dataSource = self
     }
-   
-  
+    
+    private func loadAdded(){
+        do {
+            let getAdded = try AddToCartPersistenceHelper.manager.getRecipe()
+            cartRecipe = getAdded
+        } catch {
+            return
+        }
+    }
+    
+    
+    private func loadCartData(recipe:String) {
+    RecipeAPIClient.manager.getData(recipe: recipe) { (result) in
+        switch result {
+        case.success(let recipesData):
+            DispatchQueue.main.async {
+                self.cartRecipe = recipesData
+            }
+        case.failure(let error):
+            print(error)
+
+        }
+    }
+
+}
    
     //MARK: CONSTRAINTS
       
@@ -88,7 +111,7 @@ extension ShoppingCartViewController: UITableViewDataSource {
             }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 200
     }
         }
     
