@@ -24,7 +24,7 @@ class CartTableViewCell: UITableViewCell {
     
     lazy var totalAmountLabel: UILabel = {
        let totalLabel = UILabel()
-        totalLabel.font = UIFont (name: "optima-bold", size: 10)
+        totalLabel.font = UIFont (name: "optima-bold", size: 16)
         totalLabel.text = "serving"
         totalLabel.textAlignment = .center
         totalLabel.textColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
@@ -35,7 +35,7 @@ class CartTableViewCell: UITableViewCell {
     
     lazy var recipeTitleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.font = UIFont (name: "optima-bold", size: 14)
+        titleLabel.font = UIFont (name: "optima-bold", size: 18)
         titleLabel.text = "serving"
         titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.textAlignment = .center
